@@ -1,0 +1,20 @@
+{
+    "name": "frida-java-stacktrace",
+    "version": "1.0.0",
+    "description": "make java stacktrace with full signature",
+    "private": false,
+    "main": "agent/index.ts",
+    "scripts": {
+        "prepare": "npm run build",
+        "build": "frida-compile agent/index.ts -o _agent.js -c",
+        "watch": "frida-compile agent/index.ts -o _agent.js -w"
+    },
+    "devDependencies": {
+        "@types/frida-gum": "^18.7.1",
+        "@types/node": "~20.9",
+        "frida-compile": "^10.2.5"
+    },
+    "dependencies": {
+        "frida-java-bridge": "^6.3.6"
+      }
+}
